@@ -73,12 +73,12 @@ public class Scraping {
      * @throws HokieSpaTimeoutException 
      */
     public List<Course> getCourses(String semesterCode) throws HokieSpaTimeoutException {
-        
+
         List<Course> courses = new LinkedList<Course>();
         Schedule schedule = new Schedule();
         
         if (scrape.retrieveSchedule(schedule, semesterCode)) {
-         
+
             courses = schedule.getAllCourses();
         }
 
